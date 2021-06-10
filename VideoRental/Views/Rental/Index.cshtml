@@ -1,0 +1,43 @@
+﻿@model List<Rental>
+@{
+    ViewData["Title"] = "Rentals";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Rentals</h1>
+        </div>
+        <div class="col">
+            <a class="btn btn-success" asp-controller="Rental" asp-action="Create">Rent a movie!</a>
+        </div>
+    </div>
+</div>
+<table class="table table-striped table-dark">
+    <caption>List of active rentals</caption>
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(Model => Model.First().Id)</th>
+            <th>@Html.DisplayNameFor(Model => Model.First().rentedDays)</th>
+            <th>@Html.DisplayNameFor(Model => Model.First().rDay)</th>
+            <th>@Html.DisplayNameFor(Model => Model.First().movie.Name)</th>
+            <th>Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Rental rt in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(m => rt.Id)</td>
+                <td>@Html.DisplayFor(m => rt.rentedDays) Days</td>
+                <td>@Html.DisplayFor(m => rt.rDay)</td>
+                <td>@Html.DisplayFor(m => rt.movie.Name)</td>
+                <td>
+                    <a asp-action="Details" asp-route-Id="@rt.movie.Id" class="btn btn-info">Details</a>
+                    <a asp-action="Delete" asp-route-Id="@rt.Id" class="btn btn-danger">Delete</a>
+                    <a asp-action="Update" asp-route-Id="@rt.Id" class="btn btn-success">Update</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

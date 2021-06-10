@@ -1,0 +1,29 @@
+﻿@model Rental
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<div class="container" align="center">
+    <div class="row col-6" align="center">
+        <div class="col-md-12">
+            <form asp-action="Create">
+                <div class="form-group">
+                    <label asp-for="rentedDays" class="control-label"></label>
+                    <input asp-for="rentedDays" class="form-control" />
+                    <span asp-validation-for="rentedDays" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="movieId" class="control-label"></label>
+                    <select asp-for="movieId" class="form-control" asp-items="@ViewBag.movieList">
+                    </select>
+                    <span asp-validation-for="movieId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-success" />
+                    <a class="btn btn-info" asp-action="Index">Back</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

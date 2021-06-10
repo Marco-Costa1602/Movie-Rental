@@ -1,0 +1,27 @@
+﻿@model Movie
+
+<div class="container">
+    <div class="col-6">
+        <div class="row">
+            <h5>Movie Name:&nbsp;</h5>
+            <p>@Model.Name</p>
+        </div>
+        <div class="row">
+            <h5>Synopsis:</h5>
+            <p>@Model.Synopsis</p>
+        </div>
+        <div class="row">
+            <h5>Price:&nbsp;</h5>
+            <p>R$@Model.Price</p>
+        </div>
+        <div class="row">
+            <h5>Release Date:&nbsp;</h5>
+            <p>@Model.Release</p>
+        </div>
+        <div class="row">
+        <a asp-action="Index" class="btn btn-info">Back</a>
+        </div>
+    </div>            
+</div>
+
+

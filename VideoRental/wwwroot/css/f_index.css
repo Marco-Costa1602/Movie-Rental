@@ -1,0 +1,30 @@
+﻿.dim-background {
+    margin-top: 50px;
+    font-family: monospace;
+}
+
+.titleP{
+    font-size: 20px;
+}
+
+caption{
+    color: white;
+}
+
+body {
+    background-color: #24241f;
+    color: white;
+}
+
+footer {
+    background-color: white;
+}
+
+.footer-Holder {
+    color: #202123;
+}
+
+.nav {
+    background-color: #333437 !important;
+    color: #202123;
+}

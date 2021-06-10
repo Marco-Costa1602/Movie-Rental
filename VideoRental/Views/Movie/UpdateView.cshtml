@@ -1,0 +1,40 @@
+﻿@model Movie
+
+
+<div class="container" align="center">
+    <div class="row col-6" align="center">
+        <div class="col-md-12">
+            <form asp-action="Update">
+                <!--Esse formulario vai executar a ação Update-->
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Synopsis" class="control-label"></label>
+                    <input asp-for="Synopsis" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Price" class="control-label"></label>
+                    <input asp-for="Price" class="form-control" />
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Release" class="control-label"></label>
+                    <input asp-for="Release" class="form-control" />
+                    <span asp-validation-for="Release" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Duration" class="control-label"></label>
+                    <input asp-for="Duration" class="form-control" />
+                    <span asp-validation-for="Duration" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input asp-action="Update" asp-route-Id="@Model.Id" type="submit" value="Update" class="btn btn-success" />
+                    <a asp-action="Index">Back</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

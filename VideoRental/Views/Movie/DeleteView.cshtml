@@ -1,0 +1,4 @@
+﻿@model Movie
+<h2>Delete the movie @Model.Name ?</h2>
+<a asp-action="Delete" asp-route-Id="@Model.Id" class="btn btn-danger">Delete</a>
+<a asp-action="Index" class="btn btn-info">Back</a>
